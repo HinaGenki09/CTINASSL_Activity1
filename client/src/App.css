@@ -11,7 +11,16 @@
 }
 
 .highlight {
+  color: #90a4ae;
+}
+
+.tag {
+  display: inline-block;
   color: #607d8b;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .navbar {
@@ -153,6 +162,8 @@
   right: 5px;
 }
 
+/* Features */
+
 .features {
   padding: 45px 8%;
   text-align: center;
@@ -195,17 +206,221 @@
   color: #455a64;
 }
 
+/* Molecule Library */
+
+.molecule-library {
+  padding: 50px 8%;
+  background: white;
+  text-align: center;
+  scroll-margin-top: 20px;
+}
+
+.library-controls {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+.add-button,
+.save-button {
+  background: #455a64;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-button:hover,
+.save-button:hover {
+  background: #607d8b;
+}
+
+/* Add and Edit Form */
+
+.molecule-form-container {
+  background: #f1f3f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.molecule-form-container h3 {
+  color: #455a64;
+  margin-top: 0;
+}
+
+.molecule-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #455a64;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+
+.cancel-button {
+  background: #90a4ae;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Molecule Cards */
+
+.molecule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  text-align: left;
+}
+
+.molecule-card {
+  background: #f1f3f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 22px;
+}
+
+.molecule-card h3 {
+  color: #455a64;
+  margin: 18px 0 8px;
+}
+
+.molecule-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 45px;
+}
+
+.molecule-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.molecule-category {
+  background: #dce4e8;
+  color: #455a64;
+  padding: 5px 9px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.molecule-symbol {
+  font-size: 20px;
+  font-weight: bold;
+  color: #607d8b;
+}
+
+.molecule-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.edit-button {
+  background: #607d8b;
+  color: white;
+}
+
+.delete-button {
+  background: #e0e0e0;
+  color: #444;
+}
+
+.edit-button:hover {
+  background: #455a64;
+}
+
+.delete-button:hover {
+  background: #ccc;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  padding: 25px;
+}
+
+.molecule-count {
+  color: #777;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+/* About */
+
 .about {
   display: flex;
   gap: 35px;
   padding: 40px 8%;
-  background: white;
+  background: #f1f3f5;
 }
 
 .about > div,
 .about > p {
   flex: 1;
 }
+
+/* Footer */
 
 footer {
   background: #455a64;
@@ -219,6 +434,8 @@ footer {
 footer p {
   font-size: 12px;
 }
+
+/* Responsive Design */
 
 @media (max-width: 768px) {
   .navbar {
@@ -243,8 +460,22 @@ footer p {
     width: 100%;
   }
 
-  .feature-grid {
+  .feature-grid,
+  .molecule-grid {
     grid-template-columns: 1fr;
+  }
+
+  .library-controls {
+    flex-direction: column;
+  }
+
+  .molecule-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-buttons {
+    grid-column: auto;
+    flex-wrap: wrap;
   }
 
   .about,
